@@ -1,0 +1,126 @@
+body,
+html {
+  background-color: #f0f4f7;
+}
+
+.logo {
+  padding: 7px 90px;
+  background-color: #f0f4f7;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 15px 15px #fff;
+}
+
+.logo img {
+  width: 390px;
+}
+
+.grid-parent--container {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  padding: 20px 25px;
+  flex-flow: column;
+  margin: 220px auto;
+  width: 1100px;
+}
+
+.grid-container {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row;
+}
+
+.grid-header {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.grid-header .park-name {
+  font-size: 34px;
+  font-weight: 700;
+  justify-self: flex-start;
+}
+
+.grid-header .date-label {
+  justify-self: flex-end;
+  color: #98a4b8;
+  font-weight: 400;
+  font-size: 24px;
+}
+/* Grid */
+.parent-grid {
+  display: flex;
+  flex-flow: row;
+}
+
+.parent-grid div:last-child {
+  border-right: 1px solid #eeeff1;
+  height: calc(100% - 23px);
+}
+
+.y-axis-label {
+  display: flex;
+  flex-flow: column;
+  justify-items: center;
+}
+
+.y-axis-label div {
+  height: 39px;
+  display: flex;
+  margin-right: 8px;
+  border: 1px solid transparent;
+  justify-content: center;
+  align-items: center;
+  color: #d2d4d7;
+}
+
+.x-axis-label {
+  color: #d2d4d7;
+  display: block;
+  margin-top: 5px;
+}
+
+/* TODO: double bordering effect removal*/
+.grid-x-axis,
+.grid-y-axis {
+  display: flex;
+  flex: 1;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eeeff1;
+}
+
+.grid-x-axis.needs--maintenance img {
+  width: 20px;
+}
+
+.grid-x-axis.safe {
+  background-color: #51b687;
+}
+
+.grid-x-axis.unsafe {
+  background-color: red;
+}
+
+.grid-x-axis:nth-child(odd) {
+  border-right: none;
+  border-bottom: 0;
+}
+
+.grid-x-axis:nth-child(even) {
+  border-right: none;
+  border-bottom: 0;
+}
+
+/* remove extra border */
+.grid-x-axis:last-of-type {
+  border-bottom: 1px solid #eeeff1;
+}
